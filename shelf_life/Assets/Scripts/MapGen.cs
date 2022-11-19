@@ -21,14 +21,14 @@ public class MapGen : MonoBehaviour
         roadTransform = GameObject.Find("Road").transform;
         for (int i = 0; i < 5; i++)
         {
-            GameObject bx;
-            bx = GameObject.Instantiate(mapPane);
+            GameObject map;
+            map = GameObject.Instantiate(mapPane);
 
-            bx.transform.parent = roadTransform;
-            bx.tag = "road";
-            bx.transform.position = new Vector3(paneWidth * i, 0, 0f);
+            map.transform.parent = roadTransform;
+            map.tag = "road";
+            map.transform.position = new Vector3(paneWidth * i, 0, 0f);
             
-            roadQueue.Enqueue(bx);
+            roadQueue.Enqueue(map);
         }
     }
 
