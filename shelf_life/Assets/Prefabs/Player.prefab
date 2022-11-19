@@ -439,10 +439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  cartempty: {fileID: 2464875429430859235}
-  cartfull1: {fileID: 4592697956104102209}
-  cartfull2: {fileID: 222314986195514400}
-  cartfull3: {fileID: 7982736759070405985}
 --- !u!95 &8709719548351580387
 Animator:
   serializedVersion: 4
@@ -475,6 +471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d41b47cd9cfcd48a12673b51a1216c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cartempty: {fileID: 2464875429430859235}
+  cartfull1: {fileID: 4592697956104102209}
+  cartfull2: {fileID: 222314986195514400}
+  cartfull3: {fileID: 7982736759070405985}
 --- !u!1 &6116684259706253366
 GameObject:
   m_ObjectHideFlags: 0
