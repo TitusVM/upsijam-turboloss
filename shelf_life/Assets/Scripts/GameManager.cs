@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static float MOVEMENT_SPEED = 0.1f;
+
+    [SerializeField] private AudioSource click;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,4 +37,10 @@ public class GameManager : MonoBehaviour
         QualitySettings.vSyncCount = 0;  // VSync must be disabled
         Application.targetFrameRate = 60;
     }
+    public void OnClick()
+    {
+        Debug.Log("Click");
+        click.Play();
+    }
+
 }
