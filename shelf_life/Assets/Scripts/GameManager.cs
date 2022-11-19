@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource click;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,4 +25,12 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         
     }
+
+    public void OnClick()
+    {
+        Debug.Log("Click");
+        click.Play();
+    }
+
+
 }
