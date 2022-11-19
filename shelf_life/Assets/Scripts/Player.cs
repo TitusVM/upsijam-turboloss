@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        itemsCollected = 0;
     }
 
     // Update is called once per frame
@@ -34,41 +34,40 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag.Equals("item"))
         {
             Destroy(collision.gameObject);
-            itemsCollected += 0.5f;
-            itemsCollected = Mathf.RoundToInt(itemsCollected + 0.1f);
+            itemsCollected += 50f;
             Debug.Log(itemsCollected);
-
-            if(itemsCollected > 0 && itemsCollected < 10)
+            float tmpCollected = itemsCollected / 50;
+            if(tmpCollected > 0 && tmpCollected < 10)
             {
                 cartempty.SetActive(false);
                 cartfull1.SetActive(true);
             }
-            else if (itemsCollected >= 10 && itemsCollected < 20)
+            else if (tmpCollected >= 10 && tmpCollected < 20)
             {
                 cartfull1.SetActive(false);
                 cartfull2.SetActive(true);
             }
-            else if (itemsCollected >= 20 && itemsCollected < 30)
+            else if (tmpCollected >= 20 && tmpCollected < 30)
             {
                 cartfull2.SetActive(false);
                 cartfull3.SetActive(true);
             }
-            else if (itemsCollected >= 30 && itemsCollected < 40)
+            else if (tmpCollected >= 30 && tmpCollected < 40)
             {
                 cartfull3.SetActive(false);
                 cartfull4.SetActive(true);
             }
-            else if (itemsCollected >= 40 && itemsCollected < 50)
+            else if (tmpCollected >= 40 && tmpCollected < 50)
             {
                 cartfull4.SetActive(false);
                 cartfull5.SetActive(true);
             }
-            else if (itemsCollected >= 50 && itemsCollected < 60)
+            else if (tmpCollected >= 50 && tmpCollected < 60)
             {
                 cartfull5.SetActive(false);
                 cartfull6.SetActive(true);
             }
-            else if (itemsCollected >= 60 && itemsCollected < 70)
+            else if (tmpCollected >= 60 && tmpCollected < 70)
             {
                 cartfull6.SetActive(false);
                 cartfull7.SetActive(true);
