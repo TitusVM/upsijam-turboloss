@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
 
-    public float timeValue = 90;
+    public float timeValue = 30;
     public TextMeshProUGUI timeText;
 
 
@@ -21,6 +22,14 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
+            if (Player.itemsCollected < 10)
+            {
+                SceneManager.LoadScene("Game"); // TODO: Changer le nom
+            }
+            else
+            {
+                SceneManager.LoadScene("MainMenu"); // TODO: Changer le nom
+            }
         }
 
         displayTime(timeValue);

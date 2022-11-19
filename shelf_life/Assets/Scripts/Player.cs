@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject cartfull6;
     [SerializeField] private GameObject cartfull7;
     [SerializeField] private GameObject cartfull8;
-    private float itemsCollected = 0;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    public static float itemsCollected = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = itemsCollected.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             itemsCollected += 0.5f;
+            itemsCollected = Mathf.RoundToInt(itemsCollected + 0.1f);
             Debug.Log(itemsCollected);
 
             if(itemsCollected > 0 && itemsCollected < 10)
@@ -75,18 +78,6 @@ public class Player : MonoBehaviour
                 cartfull7.SetActive(false);
                 cartfull8.SetActive(true);
             }
-        }
-    }
-
-    public void loadFinalCutscene()
-    {
-        if (itemsCollected < 10)
-        {
-            SceneManager.LoadScene("ending_one"); // TODO: Changer le nom
-        }
-        else
-        {
-            SceneManager.LoadScene("ending_two"); // TODO: Changer le nom
         }
     }
 }
