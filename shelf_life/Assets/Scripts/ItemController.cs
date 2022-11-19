@@ -82,7 +82,7 @@ public class ItemController : MonoBehaviour
         GameObject item = GameObject.Instantiate(itemPane);
 
         item.transform.parent = roadTransform;
-        item.tag = "Item";
+        item.tag = "item";
         item.transform.position = new Vector3(randomX, randomY, -1f);
 
         if(i != -1)

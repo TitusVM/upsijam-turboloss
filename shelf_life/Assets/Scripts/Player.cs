@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Item"))
+        if (collision.gameObject.tag.Equals("item"))
         {
             Destroy(collision.gameObject);
             itemsCollected++;
