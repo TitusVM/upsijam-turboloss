@@ -28,4 +28,10 @@ public class GameManager : MonoBehaviour
     {
         return MOVEMENT_SPEED;
     }
+
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 60;
+    }
 }

@@ -70,15 +70,13 @@ public class ItemController : MonoBehaviour
 
     private void updateRandomPos()
     {
-        randomX = paneWidth + UnityEngine.Random.Range(-40, 40);
-        randomY = UnityEngine.Random.Range(-paneHeight / 4, paneHeight / 4);
+        randomX = 3 * paneWidth + UnityEngine.Random.Range(-40, 40);
+        randomY = UnityEngine.Random.Range(-paneHeight / 2, paneHeight / 2);
     }
 
     private void CreateItem(int i = -1)
     {
         updateRandomPos();
-        randomX = 3 * paneWidth + UnityEngine.Random.Range(-paneWidth, paneWidth);
-        randomY = UnityEngine.Random.Range(-paneHeight / 4, paneHeight / 4);
         GameObject item = GameObject.Instantiate(itemPane);
 
         item.transform.parent = roadTransform;

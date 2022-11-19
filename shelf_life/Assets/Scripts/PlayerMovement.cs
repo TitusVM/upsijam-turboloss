@@ -36,26 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 pos = Camera.main.WorldToViewportPoint(rbTransform.position);
-        if (pos.x >= 0 && pos.x <= 1 && pos.y >= 0 && pos.y <= 1)
-        {
-            rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
-        }
-        else if (pos.x < 0)
-        {
-            rb.position = new Vector3(rbTransform.position.x + 0.01f, rbTransform.position.y, rbTransform.position.z);
-        }
-        else if (pos.x > 1.0)
-        {
-            rb.position = new Vector3(rbTransform.position.x - 0.01f, rbTransform.position.y, rbTransform.position.z);
-        }
-        else if (pos.y < 0)
-        {
-            rb.position = new Vector3(rbTransform.position.x, rbTransform.position.y+0.01f, rbTransform.position.z);
-        }
-        else if (pos.y > 1.0)
-        {
-            rb.position = new Vector3(rbTransform.position.x, rbTransform.position.y - 0.01f, rbTransform.position.z);
-        }
+        rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
     }
 }
