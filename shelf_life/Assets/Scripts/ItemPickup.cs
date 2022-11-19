@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TmpMovePlayer : MonoBehaviour
+public class ItemPickup : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject item;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,14 @@ public class TmpMovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //player.transform.position = new Vector3((float)(player.transform.position.x + 0.1), 0); // LE JOUEUR NE BOUGE PAS
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Debug.Log(collision.gameObject.tag);
+        }
     }
 }

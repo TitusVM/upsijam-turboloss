@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static float MOVEMENT_SPEED = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
         
+    }
+
+    public static float getMovementSpeed()
+    {
+        return MOVEMENT_SPEED;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Item : MonoBehaviour
 {
@@ -8,20 +9,11 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        item.transform.position = new Vector3((float)(item.transform.position.x - 0.1), item.transform.position.y, item.transform.position.z);
-    }
-
-    public void OnCollisionEnter2D(Collision collision)
-    {
-        if (collision.gameObject.tag == "player")
-        {
-            
-        }
+        item.transform.position = new Vector3((float)(item.transform.position.x - GameManager.getMovementSpeed()), item.transform.position.y, item.transform.position.z);
     }
 }

@@ -14,6 +14,6 @@ public class MapMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mapTile.transform.position = new Vector3((float)(mapTile.transform.position.x - 0.1), 0); // LE JOUEUR NE BOUGE PAS
+        mapTile.transform.position = new Vector3((float)(mapTile.transform.position.x - GameManager.getMovementSpeed()), 0); // LE JOUEUR NE BOUGE PAS
     }
 }
