@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -74,6 +75,18 @@ public class Player : MonoBehaviour
                 cartfull7.SetActive(false);
                 cartfull8.SetActive(true);
             }
+        }
+    }
+
+    public void loadFinalCutscene()
+    {
+        if (itemsCollected < 10)
+        {
+            SceneManager.LoadScene("ending_one"); // TODO: Changer le nom
+        }
+        else
+        {
+            SceneManager.LoadScene("ending_two"); // TODO: Changer le nom
         }
     }
 }
