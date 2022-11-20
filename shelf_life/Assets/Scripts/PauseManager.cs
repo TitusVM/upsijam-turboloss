@@ -17,6 +17,7 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            GameManager.setMovementSpeedTo0();
             Time.timeScale = 0f;
             pauseMenu.SetActive(true);
         }
@@ -24,12 +25,14 @@ public class PauseManager : MonoBehaviour
 
     public void Resume()
     {
+        GameManager.setMovementSpeedBack();
         Time.timeScale = 1.0f;
         pauseMenu.SetActive(false);
     }
 
     public void BackToMenu()
     {
+        GameManager.setMovementSpeedBack();
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }

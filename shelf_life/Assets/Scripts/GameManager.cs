@@ -30,6 +30,14 @@ public class GameManager : MonoBehaviour
         return MOVEMENT_SPEED;
     }
 
+    public static void setMovementSpeedTo0()
+    {
+        MOVEMENT_SPEED = 0.0f;
+    }
+    public static void setMovementSpeedBack()
+    {
+        MOVEMENT_SPEED= 0.1f;
+    }
     void Awake()
     {
         QualitySettings.vSyncCount = 0;  // VSync must be disabled
