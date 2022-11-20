@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject cartfull7;
     [SerializeField] private GameObject cartfull8;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private AudioSource collect;
     public static float itemsCollected = 0;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("item"))
         {
-            if(GameManager.isEndless)
+            collect.Play();
+
+            if (GameManager.isEndless)
             {
                 GameManager.gameOver = true;
             }
