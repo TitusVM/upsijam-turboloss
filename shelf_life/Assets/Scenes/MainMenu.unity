@@ -1415,7 +1415,7 @@ RectTransform:
   m_Children:
   - {fileID: 384964354}
   m_Father: {fileID: 1528173658}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2696,7 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1413565674}
-  endlessBtn: {fileID: 0}
+  endlessBtn: {fileID: 745744503}
 --- !u!4 &1572202162
 Transform:
   m_ObjectHideFlags: 0
