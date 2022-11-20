@@ -22,13 +22,13 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
-            if (Player.itemsCollected < 10)
+            if (Player.itemsCollected < 1)
             {
-                SceneManager.LoadScene("Game"); // TODO: Changer le nom
+                SceneManager.LoadScene("WinCutscene 1"); // TODO: Changer le nom
             }
             else
             {
-                SceneManager.LoadScene("MainMenu"); // TODO: Changer le nom
+                SceneManager.LoadScene("FailCutscene"); // TODO: Changer le nom
             }
         }
 

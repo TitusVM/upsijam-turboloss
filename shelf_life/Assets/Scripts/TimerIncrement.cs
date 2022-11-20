@@ -10,14 +10,13 @@ public class TimerIncrement : MonoBehaviour
     public float timeValue = 30;
     public TextMeshProUGUI timeText;
     public GameObject gameOverPanel;
-    public GameObject deadPlayer;
     // Start is called before the first frame update
     void Update()
     {
         if(GameManager.gameOver)
         {
             gameOverPanel.SetActive(true);
-            deadPlayer.SetActive(true);
+
         }
 
         timeValue += Time.deltaTime;
