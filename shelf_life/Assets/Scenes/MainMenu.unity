@@ -1460,7 +1460,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 745744504}
   m_OnClick:
     m_PersistentCalls:
@@ -2619,6 +2619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1413565674}
+  endlessBtn: {fileID: 0}
 --- !u!4 &1572202162
 Transform:
   m_ObjectHideFlags: 0

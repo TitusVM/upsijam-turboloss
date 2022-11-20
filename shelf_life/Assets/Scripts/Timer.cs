@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
+            GameManager.finishedGameOnce = true;
             if (Player.itemsCollected < 1)
             {
                 SceneManager.LoadScene("WinCutscene 1"); // TODO: Changer le nom
