@@ -33,6 +33,10 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("item"))
         {
+            if(GameManager.isEndless)
+            {
+                GameManager.gameOver = true;
+            }
             Destroy(collision.gameObject);
             itemsCollected += 50f;
             Debug.Log(itemsCollected);

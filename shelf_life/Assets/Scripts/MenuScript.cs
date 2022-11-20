@@ -19,6 +19,14 @@ public class MenuScript : MonoBehaviour
 
     public void nextScene()
     {
+        GameManager.isEndless= false;
+        GameManager.gameOver= false;
         SceneManager.LoadScene("Game");
+    }
+    public void loadEndless()
+    {
+        GameManager.isEndless = true;
+        GameManager.gameOver = false;
+        SceneManager.LoadScene("Endless");
     }
 }
