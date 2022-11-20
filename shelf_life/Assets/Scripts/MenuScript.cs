@@ -21,7 +21,7 @@ public class MenuScript : MonoBehaviour
     {
         GameManager.isEndless= false;
         GameManager.gameOver= false;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Tuto");
     }
     public void loadEndless()
     {

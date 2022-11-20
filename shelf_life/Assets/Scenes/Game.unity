@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098293029167241840, guid: e75f1737bd1a71d4a93cc9520d3ec4fa, type: 3}
       propertyPath: timeValue
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6098293029167241841, guid: e75f1737bd1a71d4a93cc9520d3ec4fa, type: 3}
       propertyPath: m_RootOrder
